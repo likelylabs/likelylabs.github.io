@@ -5,3 +5,4 @@ adcolony.com, 5d8cbf6671c93a42, RESELLER, 1ad675c9de6b5176
 rubiconproject.com, 16356, RESELLER, 0bfd66d529a55807
 pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
 media.net, 8CU36P121, DIRECT
+openx.com, 556882990, DIRECT, 6a698e2ec38604c6
