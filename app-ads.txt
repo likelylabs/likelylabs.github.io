@@ -25,3 +25,5 @@ loopme.com,11446,RESELLER,6c8d5f95897a5a3b
 
 EMXDGT.com, 2352, DIRECT, 1e1d41537f7cad7f
 Appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
+vidoomy.com, 6858194, RESELLER
+adform.com, 2742, RESELLER
