@@ -7,6 +7,10 @@ pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
 media.net, 8CU36P121, DIRECT
 openx.com, 556882990, DIRECT, 6a698e2ec38604c6
 
+##Magnite##
+rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+rubiconproject.com, 22884, RESELLER, 0bfd66d529a55807
+
 ##Mobfox##
 
 uis.mobfox.com, 1657, DIRECT, 5529a3d1f59865be
