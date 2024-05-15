@@ -30,3 +30,5 @@ EMXDGT.com, 2352, DIRECT, 1e1d41537f7cad7f
 Appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
 vidoomy.com, 6858194, RESELLER
 adform.com, 2742, RESELLER
+improvedigital.com, 2417, RESELLER
+lemmatechnologies.com, 942, RESELLER, 7829010c5bebd1fb
