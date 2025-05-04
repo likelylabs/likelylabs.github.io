@@ -32,3 +32,14 @@ vidoomy.com, 6858194, RESELLER
 adform.com, 2742, RESELLER
 improvedigital.com, 2417, RESELLER
 lemmatechnologies.com, 942, RESELLER, 7829010c5bebd1fb
+
+##Axis##
+
+axis-marketplace.com, 238, DIRECT
+video.unrulymedia.com, 579227028, RESELLER
+opera.com, pub12108925371520,DIRECT,55a0c5fd61378de3
+pubmatic.com, 166553, RESELLER, 5d62403b186f2ace
+adyoulike.com, 4d5014f8da11fc0a70ebbda5d4537935, DIRECT
+improvedigital.com , 2539, RESELLER
+themediasense.com, 1115, DIRECT
+singularads.com, 891421, RESELLER
