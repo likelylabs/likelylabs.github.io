@@ -15,6 +15,7 @@ This is a static GitHub Pages website for Likely Labs, a company that makes mobi
   - hktwradio (Hong Kong/Taiwan Radio)
   - sgradio (Singapore Radio)
   - myradio (Malaysia Radio)
+  - photoswipe (PhotoSwipe)
 - `app-ads.txt` - App-ads.txt for ad network verification
 - `logo.jpg` - Company logo
 
