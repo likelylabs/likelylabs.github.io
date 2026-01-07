@@ -1,356 +1,570 @@
 <!DOCTYPE html>
-<html class="cspio">
+<html lang="en">
 <head>
-	<meta name="facebook-domain-verification" content="5z9r7yvsdod0o2dmhc9rntuxluo8bk" />
-	<!---
-	Welcome to our free coming soon page template by http://comingsoonpage.com Get your free download at https://www.seedprod.com/free-coming-soon-page/
-	This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
-	http://creativecommons.org/licenses/by-nc-nd/4.0/
-
-	To get started follow this checklist.
-
-	1. Replace the *Page Title* on lines 23, 31 & 296
-	2. Set the *Page Description* on lines 26, 32 & 298
-	3. Set an optional *Logo* on lines 294 using the src attribute.
-	4. Set your *Facebook Profile* URL on line 312 using the href attribute.
-	5. Set your *Twitter Profile* URL on line 313 using the href attribute.
-	6. Set your *Email* on line 314 using the href attribute.
-	7. Set your background image on line 63, see file README.mb for additional background images.
-	8. Set your MailChimp email post URL on line 300 See video: https://youtu.be/YUdP1qfMot8
-	9. FTP to your Website. 
-	-->
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Likely Labs</title>
-
-	<meta name="generator" content="comingsoonpage.com 1.0.0" />
-	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:url" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="facebook-domain-verification" content="5z9r7yvsdod0o2dmhc9rntuxluo8bk" />
+
+	<title>Likely Labs - Mobile Apps</title>
+	<meta name="description" content="Likely Labs creates beautiful mobile apps that people love. From radio streaming to photo management, we build apps that delight.">
+
+	<meta property="og:url" content="https://likelylabs.com" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Likely Labs" />
-	<meta property="og:description" content="" />
-	
-	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<meta property="og:title" content="Likely Labs - Mobile Apps" />
+	<meta property="og:description" content="Likely Labs creates beautiful mobile apps that people love. From radio streaming to photo management, we build apps that delight." />
 
-	<!-- Bootstrap and default Style -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="https://static.comingsoonpage.com/cspio-assets/1.0.0/style.css">
+	<style>
+		/* CSS Reset & Base Styles */
+		*, *::before, *::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-	<!-- Google Fonts -->
-	<link class="gf-headline" href='https://fonts.googleapis.com/css?family=Pacifico:400&subset=' rel='stylesheet' type='text/css'>
-			
-	<!-- Animate CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-	
-	<!-- Calculated Styles -->
-	<style type="text/css">
-	
-	html {
-		height: 100%;
-		overflow: hidden;
-	}
+		:root {
+			/* Dark Mode Color Palette */
+			--color-primary: #60a5fa;
+			--color-primary-light: #93c5fd;
+			--color-primary-dark: #3b82f6;
+			--color-accent: #818cf8;
+			--color-text: #f9fafb;
+			--color-text-secondary: #e5e7eb;
+			--color-text-muted: #9ca3af;
+			--color-background: #0a0a0a;
+			--color-surface: #1a1a1a;
+			--color-surface-elevated: #262626;
+			--color-border: #333333;
+			--color-border-hover: #404040;
 
-	body {
-		height:100%;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-	
-	html{
-		height:100%;
-		background: #000000; no-repeat center bottom fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
+			/* Spacing Scale */
+			--space-xs: 8px;
+			--space-sm: 16px;
+			--space-md: 24px;
+			--space-lg: 32px;
+			--space-xl: 48px;
+			--space-2xl: 64px;
+			--space-3xl: 96px;
 
-	#cspio-page{
-		background-color: rgba(0,0,0,0);
-	}
-	
-	.flexbox #cspio-page{
-		align-items: center;
-		justify-content: center;
-	}
+			/* Typography */
+			--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+			--font-size-sm: 0.875rem;
+			--font-size-base: 1rem;
+			--font-size-lg: 1.125rem;
+			--font-size-xl: 1.25rem;
+			--font-size-2xl: 1.5rem;
+			--font-size-3xl: 1.875rem;
+			--font-size-4xl: 2.25rem;
+			--font-size-5xl: 3rem;
 
-	.cspio body{
-		background: transparent;
-	}
+			/* Shadows (adapted for dark mode) */
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+			--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+			--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.6);
+			--shadow-glow: 0 0 20px rgba(96, 165, 250, 0.3);
 
-	.cspio body, .cspio body p{
-        font-family: Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		font-style: ;
-        font-size: 20px;
-        line-height: 1.50em;
-        color:#ffffff;
-    }
+			/* Border Radius */
+			--radius-sm: 6px;
+			--radius-md: 8px;
+			--radius-lg: 12px;
+			--radius-xl: 16px;
 
-	::-webkit-input-placeholder {
-		font-family:Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		font-style: ;
-	}
+			/* Transitions */
+			--transition-fast: 0.15s ease;
+			--transition-base: 0.2s ease;
+			--transition-slow: 0.3s ease;
+		}
 
-	::-moz-placeholder {
-		font-family:Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		font-style: ;
-	} 
+		html {
+			scroll-behavior: smooth;
+		}
 
-	:-ms-input-placeholder {
-		font-family:Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		font-style: ;
-	} 
+		body {
+			font-family: var(--font-sans);
+			font-size: var(--font-size-base);
+			line-height: 1.6;
+			color: var(--color-text);
+			background-color: var(--color-background);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
 
-	:-moz-placeholder {
-		font-family:Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		font-style: ;
-	}
+		/* Typography */
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 700;
+			line-height: 1.2;
+			color: var(--color-text);
+		}
 
-    .cspio h1, .cspio h2, .cspio h3, .cspio h4, .cspio h5, .cspio h6{
-        font-family: 'Pacifico';
-        color:#ffffff;
-    }
+		h1 { font-size: var(--font-size-5xl); }
+		h2 { font-size: var(--font-size-4xl); }
+		h3 { font-size: var(--font-size-3xl); }
+		h4 { font-size: var(--font-size-2xl); }
 
-	#cspio-headline{
-		font-family: 'Pacifico';
-		font-weight: 400;
-		font-style: ;
-				font-size: 48px;
-		color:#ffffff;
-		line-height: 1.00em;
-	}
+		p {
+			margin-bottom: var(--space-md);
+		}
 
-	.cspio button{
-        font-family: Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		font-style: ;
-    }
-	
-    .cspio a, .cspio a:visited, .cspio a:hover, .cspio a:active{
-		color: #ffffff;
-	}
+		a {
+			color: var(--color-primary);
+			text-decoration: none;
+			transition: color var(--transition-base);
+		}
 
-	#cspio-socialprofiles a {
-	  color: #ffffff;
-	}
-	.cspio .btn-primary,
-	.cspio .btn-primary:focus,
-	.gform_button,
-	#mc-embedded-subscribe, .submit-button {
-		color: black;
-		text-shadow: 0 -1px 0 rgba(255,255,255,0.3);
-		background-color: #ffffff;
-		background-image: -moz-linear-gradient(top,#ffffff,#d9d9d9);
-		background-image: -ms-linear-gradient(top,#ffffff,#d9d9d9);
-		background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#d9d9d9));
-		background-image: -webkit-linear-gradient(top,#ffffff,#d9d9d9);
-		background-image: -o-linear-gradient(top,#ffffff,#d9d9d9);
-		background-image: linear-gradient(top,#ffffff,#d9d9d9);
-		background-repeat: repeat-x;
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d9d9d9', GradientType=0);
-		border-color: #d9d9d9 #d9d9d9 #b3b3b3;
-		border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-		*background-color: #d9d9d9;
-		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-	}
+		a:hover {
+			color: var(--color-primary-light);
+		}
 
-	.cspio .btn-primary:hover,
-	.cspio .btn-primary:active,
-	.cspio .btn-primary.active,
-	.cspio .btn-primary.disabled,
-	.cspio .btn-primary[disabled],
-	.cspio .btn-primary:focus:hover,
-	.cspio .btn-primary:focus:active,
-	.cspio .btn-primary:focus.active,
-	.cspio .btn-primary:focus.disabled,
-	.cspio .btn-primary:focus[disabled],
-	#mc-embedded-subscribe:hover,
-	#mc-embedded-subscribe:active,
-	#mc-embedded-subscribe.active,
-	#mc-embedded-subscribe.disabled,
-	#mc-embedded-subscribe[disabled] {
-		background-color: #d9d9d9;
-		*background-color: #cccccc;
-	}
+		/* Container */
+		.container {
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 var(--space-md);
+		}
 
-	.cspio .btn-primary:active,
-	.cspio .btn-primary.active,
-	.cspio .btn-primary:focus:active,
-	.cspio .btn-primary:focus.active,
-	.gform_button:active,
-	.gform_button.active,
-	#mc-embedded-subscribe:active,
-	#mc-embedded-subscribe.active {
-		background-color: #bfbfbf;
-	}
+		/* Header with Navigation */
+		header {
+			padding: var(--space-md) 0;
+			background: var(--color-background);
+			border-bottom: 1px solid var(--color-border);
+			position: sticky;
+			top: 0;
+			z-index: 100;
+			backdrop-filter: blur(10px);
+			background: rgba(10, 10, 10, 0.95);
+		}
 
-	.form-control,
-	.progress {
-		background-color: rgba(255, 255, 255, 0.85);
-	}
+		.header-content {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: var(--space-lg);
+		}
 
-	#cspio-progressbar span,
-	.countdown_section {
-		color: black;
-		text-shadow: 0 -1px 0 rgba(255,255,255,0.3);
-	}
+		.header-nav {
+			display: flex;
+			align-items: center;
+			gap: var(--space-md);
+		}
 
-	.cspio .btn-primary:hover,
-	.cspio .btn-primary:active {
-		color: black;
-		text-shadow: 0 -1px 0 rgba(255,255,255,0.3);
-		border-color: #e6e6e6;
-	}
+		.nav-link {
+			font-size: var(--font-size-base);
+			font-weight: 500;
+			padding: var(--space-xs) var(--space-md);
+			border-radius: var(--radius-md);
+			transition: all var(--transition-base);
+			color: var(--color-text-muted);
+		}
 
-	.cspio input[type='text']:focus {
-		webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(217,217,217,0.6);
-		-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(217,217,217,0.6);
-		box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(217,217,217,0.6);
-	}
-    
-    #cspio-content {
-		display: none;
-		max-width: 600px;
-		background-color: #000000;
-		-webkit-border-radius: 2px;
-		border-radius: 2px;
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box;
-		background-color:transparent;
-	}
-    
-	.cspio .progress-bar,
-	.countdown_section,
-	.cspio .btn-primary,
-	.cspio .btn-primary:focus,
-	.gform_button {
-		background-image: none;
-		text-shadow: none;
-	}
+		.nav-link:hover {
+			background-color: var(--color-surface);
+			color: var(--color-text);
+		}
 
-	.cspio input,
-	.cspio input:focus {
-		-webkit-box-shadow: none !important;
-		box-shadow: none !important;
-	}
-							
-	#cspio-page{
-	    background: -moz-radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 37%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
-	    background: -webkit-radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 37%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
-	    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 37%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
-	}
+		/* Hero Section with Prominent Logo */
+		.hero {
+			padding: var(--space-3xl) 0;
+			text-align: center;
+			background: radial-gradient(ellipse at center, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+		}
 
-	.cspio body{
-		background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 7%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.23) 100%); 
-		background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 7%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.23) 100%); 
-		background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 7%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.23) 100%); 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b000000',GradientType=1 ); 
-	}
+		.logo-hero {
+			max-width: 400px;
+			height: auto;
+			margin: 0 auto var(--space-xl);
+			border-radius: var(--radius-lg);
+			box-shadow: var(--shadow-xl), var(--shadow-glow);
+			transition: transform var(--transition-slow);
+		}
 
-	#cspio-subscribe-btn{
-	    background:transparent;
-	    border: 1px solid #fff !important;
-	    color: #fff;
-	}
+		.logo-hero:hover {
+			transform: scale(1.05);
+		}
 
-	#cspio-subscribe-btn:hover{
-	    background: rgba(255,255,255,0.2);
-	    color: #fff;
-	}
+		.brand-name-hero {
+			font-size: var(--font-size-3xl);
+			font-weight: 700;
+			color: var(--color-text);
+			margin-bottom: var(--space-md);
+		}
 
-	#cspio-credit img{
-		margin-left:auto;
-		margin-right:auto;
-		width:125px;
-		    margin-top: -4px;
-	}
+		.hero-title {
+			margin-bottom: var(--space-md);
+			background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
 
-	#cspio-credit {
-		font-size:11px;
-	}
+		.hero-subtitle {
+			font-size: var(--font-size-xl);
+			color: var(--color-text-muted);
+			max-width: 700px;
+			margin: 0 auto var(--space-xl);
+			line-height: 1.5;
+		}
 
+		/* Apps Section */
+		.apps-section {
+			padding: var(--space-3xl) 0;
+		}
+
+		.section-header {
+			text-align: center;
+			margin-bottom: var(--space-2xl);
+		}
+
+		.section-title {
+			margin-bottom: var(--space-sm);
+		}
+
+		.section-subtitle {
+			font-size: var(--font-size-lg);
+			color: var(--color-text-muted);
+		}
+
+		.apps-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: var(--space-lg);
+			margin-bottom: var(--space-2xl);
+		}
+
+		.app-card {
+			background: var(--color-surface);
+			border: 1px solid var(--color-border);
+			border-radius: var(--radius-lg);
+			padding: var(--space-lg);
+			transition: all var(--transition-base);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.app-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 3px;
+			background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform var(--transition-base);
+		}
+
+		.app-card:hover {
+			transform: translateY(-4px);
+			box-shadow: var(--shadow-xl);
+			border-color: var(--color-border-hover);
+			background: var(--color-surface-elevated);
+		}
+
+		.app-card:hover::before {
+			transform: scaleX(1);
+		}
+
+		.app-icon {
+			width: 64px;
+			height: 64px;
+			background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+			border-radius: var(--radius-lg);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: var(--space-md);
+			font-size: var(--font-size-3xl);
+		}
+
+		.app-name {
+			font-size: var(--font-size-2xl);
+			margin-bottom: var(--space-sm);
+			color: var(--color-text);
+		}
+
+		.app-description {
+			color: var(--color-text-muted);
+			margin-bottom: var(--space-md);
+			line-height: 1.6;
+		}
+
+		.app-links {
+			display: flex;
+			gap: var(--space-sm);
+			flex-wrap: wrap;
+		}
+
+		.app-store-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: var(--space-xs);
+			padding: var(--space-xs) var(--space-sm);
+			background: var(--color-surface-elevated);
+			color: var(--color-text);
+			border: 1px solid var(--color-border);
+			border-radius: var(--radius-sm);
+			font-size: var(--font-size-sm);
+			font-weight: 500;
+			transition: all var(--transition-base);
+		}
+
+		.app-store-badge:hover {
+			background: var(--color-primary);
+			color: var(--color-background);
+			border-color: var(--color-primary);
+			transform: translateY(-2px);
+			box-shadow: var(--shadow-md);
+		}
+
+		.badge-icon {
+			font-size: var(--font-size-lg);
+		}
+
+		.app-store-badge.coming-soon {
+			background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
+			color: var(--color-text);
+			border-color: transparent;
+			cursor: default;
+		}
+
+		.app-store-badge.coming-soon:hover {
+			transform: none;
+			box-shadow: none;
+			background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
+		}
+
+		/* Contact Section */
+		.contact-section {
+			padding: var(--space-3xl) 0;
+			background: var(--color-surface);
+		}
+
+		.contact-content {
+			max-width: 600px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.contact-email {
+			display: inline-flex;
+			align-items: center;
+			gap: var(--space-sm);
+			font-size: var(--font-size-xl);
+			font-weight: 500;
+			padding: var(--space-md) var(--space-lg);
+			background: var(--color-surface-elevated);
+			border: 2px solid var(--color-border);
+			border-radius: var(--radius-lg);
+			transition: all var(--transition-base);
+			margin-top: var(--space-md);
+		}
+
+		.contact-email:hover {
+			border-color: var(--color-primary);
+			box-shadow: var(--shadow-lg);
+			transform: translateY(-2px);
+			background: var(--color-background);
+		}
+
+		.email-icon {
+			font-size: var(--font-size-2xl);
+		}
+
+		/* Footer */
+		footer {
+			padding: var(--space-xl) 0;
+			background: var(--color-background);
+			border-top: 1px solid var(--color-border);
+			text-align: center;
+		}
+
+		.footer-content {
+			color: var(--color-text-muted);
+			font-size: var(--font-size-sm);
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			:root {
+				--font-size-5xl: 2.25rem;
+				--font-size-4xl: 1.875rem;
+				--font-size-3xl: 1.5rem;
+			}
+
+			.hero {
+				padding: var(--space-2xl) 0;
+			}
+
+			.logo-hero {
+				max-width: 300px;
+				margin-bottom: var(--space-lg);
+			}
+
+			.brand-name-hero {
+				font-size: var(--font-size-2xl);
+			}
+
+			.apps-section,
+			.contact-section {
+				padding: var(--space-2xl) 0;
+			}
+
+			.apps-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.contact-email {
+				font-size: var(--font-size-lg);
+			}
+		}
+
+		@media (max-width: 480px) {
+			.logo-hero {
+				max-width: 240px;
+			}
+
+			.brand-name-hero {
+				font-size: var(--font-size-xl);
+			}
+
+			.app-links {
+				flex-direction: column;
+			}
+
+			.app-store-badge {
+				width: 100%;
+				justify-content: center;
+			}
+		}
 	</style>
-
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<!-- Modernizr -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	
-	<!-- Google Analytics Code Goes Here-->
 </head>
 <body>
-	<div id="cspio-page">
-		<div id="cspio-content">
-			
-			<img id="cspio-logo" src="logo.jpg">
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="header-content">
+				<nav class="header-nav">
+					<a href="#apps" class="nav-link">Apps</a>
+					<a href="#contact" class="nav-link">Contact</a>
+				</nav>
+			</div>
+		</div>
+	</header>
 
-			<div>
-				<a href = "mailto:hello@likelylabs.com">Contact</a>
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container">
+			<img src="logo.jpg" alt="Likely Labs Logo" class="logo-hero">
+			<div class="brand-name-hero">Likely Labs</div>
+			<h1 class="hero-title">Beautiful Apps That People Love</h1>
+			<p class="hero-subtitle">We craft mobile experiences that delight. From streaming radio stations across Asia to managing your cherished photo memories, we build apps with care and precision.</p>
+		</div>
+	</section>
+
+	<!-- Apps Section -->
+	<section id="apps" class="apps-section">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="section-title">Our Apps</h2>
+				<p class="section-subtitle">Discover our collection of mobile applications</p>
 			</div>
 
-			<div>
-				&copy; 2024 Likely Labs LTD
-			</div>
-			    				
-			<!-- <h1 id="cspio-headline">We Make Apps</h1>			    				 -->
-			
-			<!-- <div id="cspio-description">Get ready! Something really cool is coming!</div>			    				 -->
-<!-- 			
-			<form id="cspio-form" action="" method="post">
-				<div id="cspio-field-wrapper">
-					<div class="row">
-						<div class="col-md-12 seperate"><div class="input-group"><input id="cspio-email" name="EMAIL" class="form-control input-lg form-el" type="email" placeholder="Email" required/>
-					<span class="input-group-btn"><button id="cspio-subscribe-btn" type="submit" class="btn btn-lg btn-primary form-el noglow">Notify Me</button></span></div></div>
+			<div class="apps-grid">
+				<!-- PhotoSwipe - Featured -->
+				<div class="app-card">
+					<div class="app-icon">📷</div>
+					<h3 class="app-name">PhotoSwipe</h3>
+					<p class="app-description">Beautiful photo management and gallery app for organizing your memories.</p>
+					<div class="app-links">
+						<span class="app-store-badge coming-soon">
+							<span class="badge-icon">🚀</span>
+							<span>Coming Soon</span>
+						</span>
 					</div>
 				</div>
-			</form>
-			
-			<span id="cspio-privacy-policy-txt">We promise to never spam you.</span>
-			    						    			    								    			    			    				
-			<div id="cspio-socialprofiles">
-				<a href="" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a>			
-				<a href="" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>			
-				<a href="mailto:" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>			
+
+				<!-- Hong Kong Radio -->
+				<div class="app-card">
+					<div class="app-icon">🇭🇰</div>
+					<h3 class="app-name">Hong Kong Radio</h3>
+					<p class="app-description">Listen to live radio stations from Hong Kong. News, music, talk shows, and more.</p>
+					<div class="app-links">
+						<a href="https://apps.apple.com/us/app/hk-radio-%E9%A6%99%E6%B8%AF%E6%94%B6%E9%9F%B3%E6%A9%9F-chinese-radio/id1248884143" class="app-store-badge" target="_blank" rel="noopener">
+							<span class="badge-icon">📱</span>
+							<span>App Store</span>
+						</a>
+						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.hkradio" class="app-store-badge" target="_blank" rel="noopener">
+							<span class="badge-icon">▶</span>
+							<span>Google Play</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Hong Kong/Taiwan Radio -->
+				<div class="app-card">
+					<div class="app-icon">🌏</div>
+					<h3 class="app-name">Hong Kong/Taiwan Radio</h3>
+					<p class="app-description">Access radio stations from both Hong Kong and Taiwan in one convenient app.</p>
+					<div class="app-links">
+						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.hktwradio" class="app-store-badge" target="_blank" rel="noopener">
+							<span class="badge-icon">▶</span>
+							<span>Google Play</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Singapore Radio -->
+				<div class="app-card">
+					<div class="app-icon">🇸🇬</div>
+					<h3 class="app-name">Singapore Radio</h3>
+					<p class="app-description">Tune in to Singapore's top radio stations wherever you are.</p>
+					<div class="app-links">
+						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.sgradio" class="app-store-badge" target="_blank" rel="noopener">
+							<span class="badge-icon">▶</span>
+							<span>Google Play</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Malaysia Radio -->
+				<div class="app-card">
+					<div class="app-icon">🇲🇾</div>
+					<h3 class="app-name">Malaysia Radio</h3>
+					<p class="app-description">Stream Malaysian radio stations with ease. Music, news, and entertainment.</p>
+					<div class="app-links">
+						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.myradio" class="app-store-badge" target="_blank" rel="noopener">
+							<span class="badge-icon">▶</span>
+							<span>Google Play</span>
+						</a>
+					</div>
+				</div>
 			</div>
+		</div>
+	</section>
 
-			<div id="cspio-credit">
-					<span>Created with <a target="_blank" href="https://www.comingsoonpage.com"><img id="aff" src="https://static.comingsoonpage.com/cspio-assets/1.0.0/comingsoonpage.com-logo.png" alt="Created by ComingSoonPage.com"></a> Free download <a target="_blank" href="http://www.seedprod.com/free-coming-soon-page/" style="text-decoration:underline" alt="Get your free coming soon page.">here.</a>
-				</span></div> -->
-									    									    			    			    							    			     			    		
-		</div><!-- end of #cspio-content -->
-	</div>
+	<!-- Contact Section -->
+	<section id="contact" class="contact-section">
+		<div class="container">
+			<div class="contact-content">
+				<h2 class="section-title">Get in Touch</h2>
+				<p class="section-subtitle">Have questions or feedback? We'd love to hear from you.</p>
+				<a href="mailto:hello@likelylabs.com" class="contact-email">
+					<span class="email-icon">✉️</span>
+					<span>hello@likelylabs.com</span>
+				</a>
+			</div>
+		</div>
+	</section>
 
-
-	<script>
-		// Animate Delay
-		setTimeout(function(){ jQuery("#cspio-content").show().addClass('animated fadeIn'); }, 250);
-
-		// Reseize	
-		function resize(){
-				$('head').append("<style id='form-style' type='text/css'></style>");
-				$('#form-style').html('.cspio .input-group-btn, .cspio .input-group{display:block;width:100%;}.cspio #cspio-subscribe-btn{margin-left:0;width:100%;display:block;}.cspio .input-group .form-control:first-child, .cspio .input-group-addon:first-child, .cspio .input-group-btn:first-child>.btn, .cspio .input-group-btn:first-child>.dropdown-toggle, .cspio .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {border-bottom-right-radius: 4px;border-top-right-radius: 4px;}.cspio .input-group .form-control:last-child, .cspio .input-group-addon:last-child, .cspio .input-group-btn:last-child>.btn, .cspio .input-group-btn:last-child>.dropdown-toggle, .cspio .input-group-btn:first-child>.btn:not(:first-child) {border-bottom-left-radius: 4px;border-top-left-radius: 4px;}');
-		}
-		
-		$('#cspio-content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
-			function(){
-				var width = $('#cspio-field-wrapper').width();
-				if(width < 480 && width != 0){
-					resize();
-				}
-			}
-		);
-	</script>
-
-	</body>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<p>&copy; 2024 Likely Labs LTD. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>
-
-<!-- This page was generated by ComingSoonPage.com | Learn more: http://www.comingsoonpage.com -->
