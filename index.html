@@ -1,597 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="facebook-domain-verification" content="5z9r7yvsdod0o2dmhc9rntuxluo8bk" />
-
-	<title>Likely Labs - Mobile Apps</title>
-	<meta name="description" content="Likely Labs creates beautiful mobile apps that people love. From radio streaming to photo management, we build apps that delight.">
-
-	<link rel="canonical" href="https://likelylabs.com/">
-	<link rel="icon" href="/logo.jpg">
-
-	<meta property="og:url" content="https://likelylabs.com" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Likely Labs - Mobile Apps" />
-	<meta property="og:description" content="Likely Labs creates beautiful mobile apps that people love. From radio streaming to photo management, we build apps that delight." />
-	<meta property="og:image" content="https://likelylabs.com/logo.jpg" />
-
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="Likely Labs - Mobile Apps" />
-	<meta name="twitter:description" content="Likely Labs creates beautiful mobile apps that people love. From radio streaming to photo management, we build apps that delight." />
-	<meta name="twitter:image" content="https://likelylabs.com/logo.jpg" />
-
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Organization",
-		"name": "Likely Labs",
-		"url": "https://likelylabs.com",
-		"logo": "https://likelylabs.com/logo.jpg",
-		"email": "hello@likelylabs.com",
-		"description": "Likely Labs creates beautiful mobile apps that people love. From radio streaming to photo management, we build apps that delight.",
-		"sameAs": [
-			"https://apps.apple.com/developer/likely-labs-ltd/id1248884142",
-			"https://play.google.com/store/apps/developer?id=Likely+Labs"
-		]
-	}
-	</script>
-
-	<style>
-		/* CSS Reset & Base Styles */
-		*, *::before, *::after {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
-
-		:root {
-			/* Dark Mode Color Palette */
-			--color-primary: #60a5fa;
-			--color-primary-light: #93c5fd;
-			--color-primary-dark: #3b82f6;
-			--color-accent: #818cf8;
-			--color-text: #f9fafb;
-			--color-text-secondary: #e5e7eb;
-			--color-text-muted: #9ca3af;
-			--color-background: #0a0a0a;
-			--color-surface: #1a1a1a;
-			--color-surface-elevated: #262626;
-			--color-border: #333333;
-			--color-border-hover: #404040;
-
-			/* Spacing Scale */
-			--space-xs: 8px;
-			--space-sm: 16px;
-			--space-md: 24px;
-			--space-lg: 32px;
-			--space-xl: 48px;
-			--space-2xl: 64px;
-			--space-3xl: 96px;
-
-			/* Typography */
-			--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-			--font-size-sm: 0.875rem;
-			--font-size-base: 1rem;
-			--font-size-lg: 1.125rem;
-			--font-size-xl: 1.25rem;
-			--font-size-2xl: 1.5rem;
-			--font-size-3xl: 1.875rem;
-			--font-size-4xl: 2.25rem;
-			--font-size-5xl: 3rem;
-
-			/* Shadows (adapted for dark mode) */
-			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-			--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-			--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.6);
-			--shadow-glow: 0 0 20px rgba(96, 165, 250, 0.3);
-
-			/* Border Radius */
-			--radius-sm: 6px;
-			--radius-md: 8px;
-			--radius-lg: 12px;
-			--radius-xl: 16px;
-
-			/* Transitions */
-			--transition-fast: 0.15s ease;
-			--transition-base: 0.2s ease;
-			--transition-slow: 0.3s ease;
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
-
-		body {
-			font-family: var(--font-sans);
-			font-size: var(--font-size-base);
-			line-height: 1.6;
-			color: var(--color-text);
-			background-color: var(--color-background);
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-		/* Typography */
-		h1, h2, h3, h4, h5, h6 {
-			font-weight: 700;
-			line-height: 1.2;
-			color: var(--color-text);
-		}
-
-		h1 { font-size: var(--font-size-5xl); }
-		h2 { font-size: var(--font-size-4xl); }
-		h3 { font-size: var(--font-size-3xl); }
-		h4 { font-size: var(--font-size-2xl); }
-
-		p {
-			margin-bottom: var(--space-md);
-		}
-
-		a {
-			color: var(--color-primary);
-			text-decoration: none;
-			transition: color var(--transition-base);
-		}
-
-		a:hover {
-			color: var(--color-primary-light);
-		}
-
-		/* Container */
-		.container {
-			width: 100%;
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 0 var(--space-md);
-		}
-
-		/* Header with Navigation */
-		header {
-			padding: var(--space-md) 0;
-			background: var(--color-background);
-			border-bottom: 1px solid var(--color-border);
-			position: sticky;
-			top: 0;
-			z-index: 100;
-			backdrop-filter: blur(10px);
-			background: rgba(10, 10, 10, 0.95);
-		}
-
-		.header-content {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			gap: var(--space-lg);
-		}
-
-		.header-nav {
-			display: flex;
-			align-items: center;
-			gap: var(--space-md);
-		}
-
-		.nav-link {
-			font-size: var(--font-size-base);
-			font-weight: 500;
-			padding: var(--space-xs) var(--space-md);
-			border-radius: var(--radius-md);
-			transition: all var(--transition-base);
-			color: var(--color-text-muted);
-		}
-
-		.nav-link:hover {
-			background-color: var(--color-surface);
-			color: var(--color-text);
-		}
-
-		/* Hero Section with Prominent Logo */
-		.hero {
-			padding: var(--space-3xl) 0;
-			text-align: center;
-			background: radial-gradient(ellipse at center, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
-		}
-
-		.logo-hero {
-			max-width: 400px;
-			height: auto;
-			margin: 0 auto var(--space-xl);
-			border-radius: var(--radius-lg);
-			box-shadow: var(--shadow-xl), var(--shadow-glow);
-			transition: transform var(--transition-slow);
-		}
-
-		.logo-hero:hover {
-			transform: scale(1.05);
-		}
-
-		.brand-name-hero {
-			font-size: var(--font-size-3xl);
-			font-weight: 700;
-			color: var(--color-text);
-			margin-bottom: var(--space-md);
-		}
-
-		.hero-title {
-			margin-bottom: var(--space-md);
-			background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-		}
-
-		.hero-subtitle {
-			font-size: var(--font-size-xl);
-			color: var(--color-text-muted);
-			max-width: 700px;
-			margin: 0 auto var(--space-xl);
-			line-height: 1.5;
-		}
-
-		/* Apps Section */
-		.apps-section {
-			padding: var(--space-3xl) 0;
-		}
-
-		.section-header {
-			text-align: center;
-			margin-bottom: var(--space-2xl);
-		}
-
-		.section-title {
-			margin-bottom: var(--space-sm);
-		}
-
-		.section-subtitle {
-			font-size: var(--font-size-lg);
-			color: var(--color-text-muted);
-		}
-
-		.apps-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: var(--space-lg);
-			margin-bottom: var(--space-2xl);
-		}
-
-		.app-card {
-			background: var(--color-surface);
-			border: 1px solid var(--color-border);
-			border-radius: var(--radius-lg);
-			padding: var(--space-lg);
-			transition: all var(--transition-base);
-			position: relative;
-			overflow: hidden;
-		}
-
-		.app-card::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 3px;
-			background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-			transform: scaleX(0);
-			transform-origin: left;
-			transition: transform var(--transition-base);
-		}
-
-		.app-card:hover {
-			transform: translateY(-4px);
-			box-shadow: var(--shadow-xl);
-			border-color: var(--color-border-hover);
-			background: var(--color-surface-elevated);
-		}
-
-		.app-card:hover::before {
-			transform: scaleX(1);
-		}
-
-		.app-icon {
-			width: 64px;
-			height: 64px;
-			background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-			border-radius: var(--radius-lg);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-bottom: var(--space-md);
-			font-size: var(--font-size-3xl);
-		}
-
-		.app-name {
-			font-size: var(--font-size-2xl);
-			margin-bottom: var(--space-sm);
-			color: var(--color-text);
-		}
-
-		.app-description {
-			color: var(--color-text-muted);
-			margin-bottom: var(--space-md);
-			line-height: 1.6;
-		}
-
-		.app-links {
-			display: flex;
-			gap: var(--space-sm);
-			flex-wrap: wrap;
-		}
-
-		.app-store-badge {
-			display: inline-flex;
-			align-items: center;
-			gap: var(--space-xs);
-			padding: var(--space-xs) var(--space-sm);
-			background: var(--color-surface-elevated);
-			color: var(--color-text);
-			border: 1px solid var(--color-border);
-			border-radius: var(--radius-sm);
-			font-size: var(--font-size-sm);
-			font-weight: 500;
-			transition: all var(--transition-base);
-		}
-
-		.app-store-badge:hover {
-			background: var(--color-primary);
-			color: var(--color-background);
-			border-color: var(--color-primary);
-			transform: translateY(-2px);
-			box-shadow: var(--shadow-md);
-		}
-
-		.badge-icon {
-			font-size: var(--font-size-lg);
-		}
-
-		.app-store-badge.coming-soon {
-			background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
-			color: var(--color-text);
-			border-color: transparent;
-			cursor: default;
-		}
-
-		.app-store-badge.coming-soon:hover {
-			transform: none;
-			box-shadow: none;
-			background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
-		}
-
-		/* Contact Section */
-		.contact-section {
-			padding: var(--space-3xl) 0;
-			background: var(--color-surface);
-		}
-
-		.contact-content {
-			max-width: 600px;
-			margin: 0 auto;
-			text-align: center;
-		}
-
-		.contact-email {
-			display: inline-flex;
-			align-items: center;
-			gap: var(--space-sm);
-			font-size: var(--font-size-xl);
-			font-weight: 500;
-			padding: var(--space-md) var(--space-lg);
-			background: var(--color-surface-elevated);
-			border: 2px solid var(--color-border);
-			border-radius: var(--radius-lg);
-			transition: all var(--transition-base);
-			margin-top: var(--space-md);
-		}
-
-		.contact-email:hover {
-			border-color: var(--color-primary);
-			box-shadow: var(--shadow-lg);
-			transform: translateY(-2px);
-			background: var(--color-background);
-		}
-
-		.email-icon {
-			font-size: var(--font-size-2xl);
-		}
-
-		/* Footer */
-		footer {
-			padding: var(--space-xl) 0;
-			background: var(--color-background);
-			border-top: 1px solid var(--color-border);
-			text-align: center;
-		}
-
-		.footer-content {
-			color: var(--color-text-muted);
-			font-size: var(--font-size-sm);
-		}
-
-		/* Responsive Design */
-		@media (max-width: 768px) {
-			:root {
-				--font-size-5xl: 2.25rem;
-				--font-size-4xl: 1.875rem;
-				--font-size-3xl: 1.5rem;
-			}
-
-			.hero {
-				padding: var(--space-2xl) 0;
-			}
-
-			.logo-hero {
-				max-width: 300px;
-				margin-bottom: var(--space-lg);
-			}
-
-			.brand-name-hero {
-				font-size: var(--font-size-2xl);
-			}
-
-			.apps-section,
-			.contact-section {
-				padding: var(--space-2xl) 0;
-			}
-
-			.apps-grid {
-				grid-template-columns: 1fr;
-			}
-
-			.contact-email {
-				font-size: var(--font-size-lg);
-			}
-		}
-
-		@media (max-width: 480px) {
-			.logo-hero {
-				max-width: 240px;
-			}
-
-			.brand-name-hero {
-				font-size: var(--font-size-xl);
-			}
-
-			.app-links {
-				flex-direction: column;
-			}
-
-			.app-store-badge {
-				width: 100%;
-				justify-content: center;
-			}
-		}
-	</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="facebook-domain-verification" content="5z9r7yvsdod0o2dmhc9rntuxluo8bk" />
+
+  <title>Likely Labs — We build what comes next.</title>
+  <meta name="description" content="A small, independent lab designing and shipping software for the near future — apps you'll actually keep, tools that hand you back control, and experiments with AI and on-device computing." />
+
+  <link rel="canonical" href="https://likelylabs.com/" />
+  <link rel="icon" href="/logo.png" />
+
+  <meta property="og:url" content="https://likelylabs.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Likely Labs — We build what comes next." />
+  <meta property="og:description" content="An independent lab shipping software for the near future — apps, web, and browser tools built with care, plus experiments in AI and on-device computing." />
+  <meta property="og:image" content="https://likelylabs.com/logo.jpg" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Likely Labs — We build what comes next." />
+  <meta name="twitter:description" content="An independent lab shipping software for the near future — apps, web, and browser tools built with care, plus experiments in AI and on-device computing." />
+  <meta name="twitter:image" content="https://likelylabs.com/logo.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Likely Labs",
+    "url": "https://likelylabs.com",
+    "logo": "https://likelylabs.com/logo.jpg",
+    "description": "An independent lab designing and shipping software for the near future — apps, web properties, and browser tools, with experiments in AI and on-device computing.",
+    "sameAs": [
+      "https://apps.apple.com/developer/likely-labs-ltd/id1248884142",
+      "https://play.google.com/store/apps/developer?id=Likely+Labs",
+      "https://x.com/kchau",
+      "https://github.com/kevinchau"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Jost:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#0a0b14}
+    a{color:var(--neon);text-decoration:none}
+    ::selection{background:var(--neon);color:#0a0b14}
+    @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+    @keyframes flick{0%,100%{opacity:1}48%{opacity:1}50%{opacity:.55}52%{opacity:1}70%{opacity:.85}72%{opacity:1}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    @keyframes scan{from{background-position:0 0}to{background-position:0 5px}}
+    @keyframes drift{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+
+    /* Hover states — mirror the prototype's style-hover declarations.
+       !important lets them win over the elements' inline base styles. */
+    .navlink:hover{color:var(--neon)!important;text-shadow:0 0 12px var(--neon-glow)!important}
+    .btn-neon-hero:hover{background:rgba(55,242,230,.22)!important;box-shadow:0 0 24px var(--neon-glow)!important;transform:translateY(-2px)!important}
+    .btn-gold:hover{border-color:var(--gold-strong)!important;color:var(--gold)!important;box-shadow:0 0 18px var(--gold-soft)!important}
+    .chip-neon:hover{background:rgba(55,242,230,.2)!important;box-shadow:0 0 18px var(--neon-glow)!important}
+    .chip-gold:hover{border-color:var(--neon-line)!important;color:var(--neon)!important;box-shadow:0 0 14px var(--neon-soft)!important}
+    .chip-radio:hover{border-color:var(--neon-line)!important;color:var(--neon)!important}
+    .card:hover{border-color:var(--neon-line)!important;transform:translateY(-4px)!important;box-shadow:0 18px 40px rgba(0,0,0,.5),0 0 26px var(--neon-soft)!important}
+    .card-tool:hover{border-color:var(--neon-line)!important;box-shadow:0 0 26px var(--neon-soft)!important}
+    .btn-neon-tool:hover{background:rgba(55,242,230,.2)!important;box-shadow:0 0 22px var(--neon-glow)!important;transform:translateY(-2px)!important}
+    .btn-contact:hover{border-color:var(--neon-line)!important;color:var(--neon)!important;box-shadow:0 0 34px var(--neon-glow)!important;transform:translateY(-2px)!important}
+    .btn-copy:hover{border-color:var(--neon-line)!important;color:var(--neon)!important}
+
+    @media (prefers-reduced-motion:reduce){
+      *{animation:none!important}
+      html{scroll-behavior:auto}
+    }
+  </style>
 </head>
 <body>
-	<!-- Header -->
-	<header>
-		<div class="container">
-			<div class="header-content">
-				<nav class="header-nav" aria-label="Main navigation">
-					<a href="#apps" class="nav-link">Apps</a>
-					<a href="#contact" class="nav-link">Contact</a>
-				</nav>
-			</div>
-		</div>
-	</header>
+  <div style="position:relative;min-height:100vh;width:100%;background:#0a0b14;color:var(--ink);font-family:var(--sans);overflow-x:clip;--bg:#0a0b14;--ink:#f3efe4;--dim:#9a9aae;--faint:#5b5c70;--gold:#d8b45f;--gold-soft:rgba(216,180,95,.10);--gold-line:rgba(216,180,95,.26);--gold-strong:rgba(216,180,95,.55);--panel:#10111e;--panel2:#151628;--neon:#ffcf6b;--neon-soft:rgba(255,207,107,.14);--neon-line:rgba(255,207,107,.5);--neon-glow:rgba(255,207,107,.55);--neon2:#ff54a8;--neon2-glow:rgba(255,84,168,.45);--sans:'Jost',system-ui,sans-serif;--display:'Poiret One','Jost',sans-serif;--mono:'Space Mono',ui-monospace,monospace">
 
-	<main>
-	<!-- Hero Section -->
-	<section class="hero">
-		<div class="container">
-			<img src="logo.jpg" alt="Likely Labs Logo" class="logo-hero">
-			<div class="brand-name-hero">Likely Labs</div>
-			<h1 class="hero-title">Beautiful Apps That People Love</h1>
-			<p class="hero-subtitle">We craft mobile experiences that delight. From streaming radio stations across Asia to managing your cherished photo memories, we build apps with care and precision.</p>
-		</div>
-	</section>
+    <div style="position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 62% 46% at 50% 4%,var(--neon-soft),transparent 68%),radial-gradient(ellipse 46% 40% at 76% 22%,var(--neon2-glow),transparent 66%),radial-gradient(ellipse 60% 50% at 20% 30%,rgba(216,180,95,.06),transparent 70%)"></div>
+    <div style="position:fixed;left:50%;bottom:-4%;transform:translateX(-50%);width:min(1500px,150vw);height:78vh;pointer-events:none;z-index:0;background:repeating-conic-gradient(from 180deg at 50% 100%,rgba(216,180,95,.07) 0deg 0.35deg,transparent 0.35deg 4deg);-webkit-mask-image:radial-gradient(ellipse 70% 100% at 50% 100%,#000,transparent 72%);mask-image:radial-gradient(ellipse 70% 100% at 50% 100%,#000,transparent 72%);opacity:.7"></div>
+    <div style="position:fixed;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 1px,transparent 1px 5px);opacity:.5;mix-blend-mode:overlay;animation:scan 7s linear infinite"></div>
 
-	<!-- Apps Section -->
-	<section id="apps" class="apps-section">
-		<div class="container">
-			<div class="section-header">
-				<h2 class="section-title">Our Apps</h2>
-				<p class="section-subtitle">Discover our collection of mobile applications</p>
-			</div>
+    <div style="position:relative;z-index:2">
 
-			<div class="apps-grid">
-				<!-- PhotoSwipe - Featured -->
-				<div class="app-card">
-					<div class="app-icon">📷</div>
-					<h3 class="app-name">PhotoSwipe</h3>
-					<p class="app-description">Beautiful photo management and gallery app for organizing your memories.</p>
-					<div class="app-links">
-						<a href="https://apps.apple.com/app/photoswipe-clear-out-photos/id6757325562" class="app-store-badge" target="_blank" rel="noopener">
-							<span class="badge-icon">📱</span>
-							<span>App Store</span>
-						</a>
-					</div>
-				</div>
+      <header style="position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(10,11,20,.7);border-bottom:1px solid var(--gold-line)">
+        <div style="max-width:1180px;margin:0 auto;padding:15px clamp(20px,4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+          <a href="#top" style="display:inline-flex;align-items:center;gap:12px">
+            <img src="logo.png" alt="Likely Labs" style="height:26px;width:auto;display:block" />
+          </a>
+          <nav style="display:flex;align-items:center;gap:clamp(18px,2.6vw,34px);font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase">
+            <a class="navlink" href="#lab" style="color:var(--dim);transition:color .2s,text-shadow .2s">The Lab</a>
+            <a class="navlink" href="#work" style="color:var(--dim);transition:color .2s,text-shadow .2s">Work</a>
+            <a class="navlink" href="#contact" style="color:var(--dim);transition:color .2s,text-shadow .2s">Contact</a>
+          </nav>
+        </div>
+      </header>
 
-				<!-- Hong Kong Radio -->
-				<div class="app-card">
-					<div class="app-icon">🇭🇰</div>
-					<h3 class="app-name">Hong Kong Radio</h3>
-					<p class="app-description">Listen to live radio stations from Hong Kong. News, music, talk shows, and more.</p>
-					<div class="app-links">
-						<a href="https://apps.apple.com/us/app/hk-radio-%E9%A6%99%E6%B8%AF%E6%94%B6%E9%9F%B3%E6%A9%9F-chinese-radio/id1248884143" class="app-store-badge" target="_blank" rel="noopener">
-							<span class="badge-icon">📱</span>
-							<span>App Store</span>
-						</a>
-						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.hkradio" class="app-store-badge" target="_blank" rel="noopener">
-							<span class="badge-icon">▶</span>
-							<span>Google Play</span>
-						</a>
-					</div>
-				</div>
+      <main>
+        <section id="top" style="padding:clamp(64px,11vh,128px) clamp(20px,4vw,44px) clamp(48px,7vh,92px)">
+          <div style="position:relative;max-width:900px;margin:0 auto;text-align:center;border:1px solid var(--gold-line);outline:1px solid var(--gold-soft);outline-offset:-7px;padding:clamp(40px,6vw,74px) clamp(24px,5vw,64px);background:linear-gradient(180deg,rgba(255,255,255,.022),transparent 60%)">
+            <span style="position:absolute;top:-5px;left:-5px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px var(--neon-glow)"></span>
+            <span style="position:absolute;top:-5px;right:-5px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px var(--neon-glow)"></span>
+            <span style="position:absolute;bottom:-5px;left:-5px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px var(--neon-glow)"></span>
+            <span style="position:absolute;bottom:-5px;right:-5px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px var(--neon-glow)"></span>
 
-				<!-- Hong Kong/Taiwan Radio -->
-				<div class="app-card">
-					<div class="app-icon">🌏</div>
-					<h3 class="app-name">Hong Kong/Taiwan Radio</h3>
-					<p class="app-description">Access radio stations from both Hong Kong and Taiwan in one convenient app.</p>
-					<div class="app-links">
-						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.hktwradio" class="app-store-badge" target="_blank" rel="noopener">
-							<span class="badge-icon">▶</span>
-							<span>Google Play</span>
-						</a>
-					</div>
-				</div>
+            <div style="animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:.04s;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:12px;justify-content:center">
+              <span style="width:5px;height:5px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow);display:inline-block"></span>Independent lab · software for the near future
+            </div>
+            <img src="logo.png" alt="Likely Labs" style="animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:.12s;display:block;width:min(440px,80%);height:auto;margin:26px auto 8px;filter:drop-shadow(0 0 8px var(--neon-glow)) drop-shadow(0 0 26px var(--neon-soft))" />
+            <h1 style="animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:.2s;font-family:var(--display);font-weight:400;font-size:clamp(38px,7.2vw,82px);line-height:1.02;letter-spacing:.01em;color:var(--ink);margin:22px 0 0;text-shadow:0 0 26px rgba(55,242,230,.22)">We build what comes next.</h1>
+            <div style="width:112px;height:2px;margin:28px auto 0;background:var(--neon);border-radius:2px;box-shadow:0 0 8px var(--neon),0 0 22px var(--neon-glow)"></div>
+            <p style="animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:.3s;max-width:600px;margin:28px auto 0;font-size:clamp(15px,1.9vw,18.5px);line-height:1.62;color:var(--dim)">A small, independent lab. We design and ship software for the near future — apps you'll actually keep, tools that hand you back control, and experiments with AI and on-device computing.</p>
+            <div style="animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:.38s;display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px">
+              <a class="btn-neon-hero" href="#work" style="display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border:1px solid var(--neon-line);border-radius:3px;background:var(--neon-soft);color:var(--neon);font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;transition:box-shadow .25s,background .25s,transform .2s">See the work →</a>
+              <a class="btn-gold" href="#contact" style="display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border:1px solid var(--gold-line);border-radius:3px;color:var(--ink);font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;transition:border-color .25s,color .25s,box-shadow .25s">Say hello</a>
+            </div>
+          </div>
+        </section>
 
-				<!-- Singapore Radio -->
-				<div class="app-card">
-					<div class="app-icon">🇸🇬</div>
-					<h3 class="app-name">Singapore Radio</h3>
-					<p class="app-description">Tune in to Singapore's top radio stations wherever you are.</p>
-					<div class="app-links">
-						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.sgradio" class="app-store-badge" target="_blank" rel="noopener">
-							<span class="badge-icon">▶</span>
-							<span>Google Play</span>
-						</a>
-					</div>
-				</div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,44px)">
+          <span style="height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold-line))"></span>
+          <span style="width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 9px var(--neon-glow)"></span>
+          <span style="height:1px;flex:1;background:linear-gradient(90deg,var(--gold-line),transparent)"></span>
+        </div>
 
-				<!-- Malaysia Radio -->
-				<div class="app-card">
-					<div class="app-icon">🇲🇾</div>
-					<h3 class="app-name">Malaysia Radio</h3>
-					<p class="app-description">Stream Malaysian radio stations with ease. Music, news, and entertainment.</p>
-					<div class="app-links">
-						<a href="https://play.google.com/store/apps/details?id=com.likelylabs.myradio" class="app-store-badge" target="_blank" rel="noopener">
-							<span class="badge-icon">▶</span>
-							<span>Google Play</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <section id="lab" style="max-width:1180px;margin:0 auto;padding:clamp(52px,8vh,92px) clamp(20px,4vw,44px)">
+          <div style="font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--neon)">01 · The Lab</div>
+          <h2 style="font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,52px);line-height:1.06;color:var(--ink);margin:18px 0 0;max-width:760px">Small by design. Aimed at what's next.</h2>
+          <p style="max-width:620px;margin:20px 0 0;font-size:clamp(15px,1.8vw,18px);line-height:1.62;color:var(--dim)">Independent and self-directed — we answer to the people who use what we make, not a roadmap by committee. A few things, built with care and kept alive for years.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(24px,3vw,44px);margin-top:clamp(40px,5vw,60px)">
+            <div style="border-top:1px solid var(--gold-line);padding-top:22px">
+              <div style="display:flex;align-items:center;gap:10px"><span style="font-family:var(--display);font-size:26px;color:var(--gold)">01</span><span style="width:6px;height:6px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow);display:inline-block"></span></div>
+              <h3 style="font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin:16px 0 10px">Independent</h3>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--dim);margin:0">Self-directed. We build what we'd want to use, then keep it running for the long haul.</p>
+            </div>
+            <div style="border-top:1px solid var(--gold-line);padding-top:22px">
+              <div style="display:flex;align-items:center;gap:10px"><span style="font-family:var(--display);font-size:26px;color:var(--gold)">02</span><span style="width:6px;height:6px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow);display:inline-block"></span></div>
+              <h3 style="font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin:16px 0 10px">Local-first</h3>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--dim);margin:0">Software that runs on your device. No accounts you don't need, no servers quietly watching.</p>
+            </div>
+            <div style="border-top:1px solid var(--gold-line);padding-top:22px">
+              <div style="display:flex;align-items:center;gap:10px"><span style="font-family:var(--display);font-size:26px;color:var(--gold)">03</span><span style="width:6px;height:6px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow);display:inline-block"></span></div>
+              <h3 style="font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin:16px 0 10px">Forward</h3>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--dim);margin:0">We build with what's arriving — spatial computing, on-device AI — before it's obvious.</p>
+            </div>
+          </div>
+        </section>
 
-	<!-- Contact Section -->
-	<section id="contact" class="contact-section">
-		<div class="container">
-			<div class="contact-content">
-				<h2 class="section-title">Get in Touch</h2>
-				<p class="section-subtitle">Have questions or feedback? We'd love to hear from you.</p>
-				<a href="mailto:hello@likelylabs.com" class="contact-email">
-					<span class="email-icon">✉️</span>
-					<span>hello@likelylabs.com</span>
-				</a>
-			</div>
-		</div>
-	</section>
-	</main>
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,44px)">
+          <span style="height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold-line))"></span>
+          <span style="width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 9px var(--neon-glow)"></span>
+          <span style="height:1px;flex:1;background:linear-gradient(90deg,var(--gold-line),transparent)"></span>
+        </div>
 
-	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="footer-content">
-				<p>&copy; 2025 Likely Labs LTD. All rights reserved.</p>
-			</div>
-		</div>
-	</footer>
+        <section id="work" style="max-width:1180px;margin:0 auto;padding:clamp(52px,8vh,92px) clamp(20px,4vw,44px)">
+          <div style="font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--neon)">02 · Work</div>
+          <h2 style="font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,52px);line-height:1.06;color:var(--ink);margin:18px 0 clamp(34px,4vw,50px);max-width:760px">Across every surface.</h2>
+
+          <div style="display:flex;align-items:center;gap:14px;margin:0 0 22px">
+            <span style="font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)">Apps</span>
+            <span style="width:6px;height:6px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow)"></span>
+            <span style="height:1px;flex:1;background:linear-gradient(90deg,var(--gold-line),transparent)"></span>
+            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint)">iOS · ANDROID</span>
+          </div>
+
+          <div style="position:relative;border:1px solid var(--gold-line);outline:1px solid var(--gold-soft);outline-offset:-6px;border-radius:4px;background:var(--panel);padding:clamp(22px,3vw,36px);display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,52px);align-items:center;margin-bottom:16px">
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="display:flex;align-items:center;gap:14px">
+                <div style="width:58px;height:58px;flex:none"><img src="undertone-icon.png" alt="Undertone app icon" style="width:58px;height:58px;display:block;border-radius:14px" /></div>
+                <div>
+                  <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">iOS · Spatial · Local P2P</div>
+                  <h3 style="font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,38px);color:var(--ink);margin:5px 0 0;line-height:1">Undertone</h3>
+                </div>
+              </div>
+              <p style="max-width:480px;margin:20px 0 0;font-size:15px;line-height:1.62;color:var(--dim)">Talk to the room, not the cloud. In-room voice chat over a direct local link — no servers, no recording, no accounts. Join with a 4-digit code and find friends on the in-room radar.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+                <a class="chip-neon" href="https://apps.apple.com/us/app/undertone-talk-through-noise/id6779034581" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--neon-line);border-radius:3px;background:var(--neon-soft);color:var(--neon);font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;transition:box-shadow .25s,background .25s">App Store ↗</a>
+              </div>
+            </div>
+            <div style="flex:0 1 250px;display:flex;justify-content:center">
+              <img src="undertone-device.png" alt="Undertone — in-room radar" style="width:100%;max-width:270px;height:auto;display:block" />
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-bottom:44px">
+            <div class="card" style="border:1px solid var(--gold-line);border-radius:4px;background:var(--panel);padding:24px;display:flex;flex-direction:column;gap:16px;transition:border-color .25s,transform .25s,box-shadow .25s">
+              <div style="display:flex;align-items:center;gap:14px">
+                <div style="width:50px;height:50px;flex:none"><img src="photoswipe-icon.png" alt="PhotoSwipe icon" style="width:50px;height:50px;display:block;border-radius:12px" /></div>
+                <div style="min-width:0">
+                  <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">iOS · Photos</div>
+                  <h3 style="font-family:var(--display);font-weight:400;font-size:24px;color:var(--ink);margin:4px 0 0;line-height:1">PhotoSwipe</h3>
+                </div>
+              </div>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--dim);margin:0">Clear out your camera roll with a swipe. Fast, private, and entirely on-device.</p>
+              <div style="margin-top:auto"><a class="chip-gold" href="https://apps.apple.com/app/photoswipe-clear-out-photos/id6757325562" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--gold-line);border-radius:3px;font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);transition:all .22s">App Store ↗</a></div>
+            </div>
+
+            <div class="card" style="border:1px solid var(--gold-line);border-radius:4px;background:var(--panel);padding:24px;display:flex;flex-direction:column;gap:14px;transition:border-color .25s,transform .25s,box-shadow .25s">
+              <div style="display:flex;align-items:center;gap:14px">
+                <div style="width:50px;height:50px;flex:none"><img src="radio-network-icon.png" alt="Radio Network icon" style="width:50px;height:50px;display:block;border-radius:12px" /></div>
+                <div style="min-width:0">
+                  <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">iOS + Android</div>
+                  <h3 style="font-family:var(--display);font-weight:400;font-size:24px;color:var(--ink);margin:4px 0 0;line-height:1">Radio Network</h3>
+                </div>
+              </div>
+              <p style="font-size:14.5px;line-height:1.6;color:var(--dim);margin:0">Live radio, tuned by region — news, music, and talk from stations across Asia.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:auto">
+                <a class="chip-radio" href="https://apps.apple.com/us/app/hk-radio-%E9%A6%99%E6%B8%AF%E6%94%B6%E9%9F%B3%E6%A9%9F-chinese-radio/id1248884143" target="_blank" rel="noopener" style="padding:6px 11px;border:1px solid var(--gold-line);border-radius:3px;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.06em;color:var(--dim);transition:all .22s">Hong Kong</a>
+                <a class="chip-radio" href="https://play.google.com/store/apps/details?id=com.likelylabs.hktwradio" target="_blank" rel="noopener" style="padding:6px 11px;border:1px solid var(--gold-line);border-radius:3px;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.06em;color:var(--dim);transition:all .22s">Taiwan</a>
+                <a class="chip-radio" href="https://play.google.com/store/apps/details?id=com.likelylabs.sgradio" target="_blank" rel="noopener" style="padding:6px 11px;border:1px solid var(--gold-line);border-radius:3px;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.06em;color:var(--dim);transition:all .22s">Singapore</a>
+                <a class="chip-radio" href="https://play.google.com/store/apps/details?id=com.likelylabs.myradio" target="_blank" rel="noopener" style="padding:6px 11px;border:1px solid var(--gold-line);border-radius:3px;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.06em;color:var(--dim);transition:all .22s">Malaysia</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:14px;margin:0 0 22px">
+            <span style="font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)">Web</span>
+            <span style="width:6px;height:6px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow)"></span>
+            <span style="height:1px;flex:1;background:linear-gradient(90deg,var(--gold-line),transparent)"></span>
+            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint)">EV · GEAR</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-bottom:44px">
+            <a class="card" href="https://cyberoffroading.com" target="_blank" rel="noopener" style="border:1px solid var(--gold-line);border-radius:4px;background:var(--panel);overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s">
+              <div style="position:relative;width:100%;aspect-ratio:1200/630;border-bottom:1px solid var(--gold-line)"><img src="https://cyberoffroading.com/images/social/og-home-v2.jpg" alt="Cyberoffroading" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover" /></div>
+              <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h3 style="font-family:var(--display);font-weight:400;font-size:21px;color:var(--ink);margin:0;line-height:1">Cyberoffroading</h3><span style="font-family:var(--mono);font-size:12px;color:var(--gold)">↗</span></div>
+                <p style="font-size:13.5px;line-height:1.55;color:var(--dim);margin:0">Spec-focused reviews of Cybertruck off-road gear — recovery, tire tools, 240V winch builds, and Starlink mounts.</p>
+                <span style="margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint)">cyberoffroading.com</span>
+              </div>
+            </a>
+            <a class="card" href="https://tesla-essentials.com" target="_blank" rel="noopener" style="border:1px solid var(--gold-line);border-radius:4px;background:var(--panel);overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s">
+              <div style="position:relative;width:100%;aspect-ratio:1200/630;border-bottom:1px solid var(--gold-line)"><img src="https://tesla-essentials.com/images/brand/og-image.jpg" alt="Tesla Essentials" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover" /></div>
+              <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h3 style="font-family:var(--display);font-weight:400;font-size:21px;color:var(--ink);margin:0;line-height:1">Tesla Essentials</h3><span style="font-family:var(--mono);font-size:12px;color:var(--gold)">↗</span></div>
+                <p style="font-size:13.5px;line-height:1.55;color:var(--dim);margin:0">Every Tesla accessory worth owning, curated by a longtime owner. Model 3, Y, S, X, and Cybertruck.</p>
+                <span style="margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint)">tesla-essentials.com</span>
+              </div>
+            </a>
+            <a class="card" href="https://rivian-essentials.com" target="_blank" rel="noopener" style="border:1px solid var(--gold-line);border-radius:4px;background:var(--panel);overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s">
+              <div style="position:relative;width:100%;aspect-ratio:1200/630;border-bottom:1px solid var(--gold-line)"><img src="https://rivian-essentials.com/images/brand/og-image.jpg" alt="Rivian Essentials" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover" /></div>
+              <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h3 style="font-family:var(--display);font-weight:400;font-size:21px;color:var(--ink);margin:0;line-height:1">Rivian Essentials</h3><span style="font-family:var(--mono);font-size:12px;color:var(--gold)">↗</span></div>
+                <p style="font-size:13.5px;line-height:1.55;color:var(--dim);margin:0">The same, for Rivian — curated R1T, R1S, and R2 gear that earns its place in the truck.</p>
+                <span style="margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint)">rivian-essentials.com</span>
+              </div>
+            </a>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:14px;margin:0 0 22px">
+            <span style="font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)">Tools</span>
+            <span style="width:6px;height:6px;background:var(--neon);transform:rotate(45deg);box-shadow:0 0 8px var(--neon-glow)"></span>
+            <span style="height:1px;flex:1;background:linear-gradient(90deg,var(--gold-line),transparent)"></span>
+            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint)">OPEN SOURCE</span>
+          </div>
+
+          <div class="card-tool" style="border:1px solid var(--gold-line);border-radius:4px;background:var(--panel);padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;transition:border-color .25s,box-shadow .25s">
+            <div style="flex:1 1 340px;min-width:0">
+              <div style="display:flex;align-items:center;gap:14px">
+                <div style="width:52px;height:52px;flex:none"><img src="hide-unverified-x-icon.png" alt="Hide Unverified X icon" style="width:52px;height:52px;display:block;border-radius:12px" /></div>
+                <div style="min-width:0">
+                  <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">Browser extension</div>
+                  <h3 style="font-family:var(--display);font-weight:400;font-size:clamp(22px,3vw,28px);color:var(--ink);margin:5px 0 0;line-height:1">Hide Unverified X</h3>
+                </div>
+              </div>
+              <p style="max-width:560px;margin:16px 0 0;font-size:14.5px;line-height:1.6;color:var(--dim)">Filter spam on X by verification badge and account origin — entirely in your browser. No API keys, no accounts, no tracking. Chrome and Firefox.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+              <div style="display:flex;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--faint)"><span>CHROME</span><span style="color:var(--gold-line)">/</span><span>FIREFOX</span></div>
+              <a class="btn-neon-tool" href="https://github.com/kevinchau/hide-unverified-x" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1px solid var(--neon-line);border-radius:3px;background:var(--neon-soft);color:var(--neon);font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:box-shadow .25s,background .25s,transform .2s">GitHub ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,44px)">
+          <span style="height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold-line))"></span>
+          <span style="width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 9px var(--neon-glow)"></span>
+          <span style="height:1px;flex:1;background:linear-gradient(90deg,var(--gold-line),transparent)"></span>
+        </div>
+
+        <section id="contact" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,110px) clamp(20px,4vw,44px);text-align:center">
+          <div style="font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--neon)">03 · Contact</div>
+          <h2 style="font-family:var(--display);font-weight:400;font-size:clamp(40px,7vw,80px);line-height:1;color:var(--ink);margin:20px 0 0;text-shadow:0 0 26px rgba(55,242,230,.22)">Say hello.</h2>
+          <p style="max-width:440px;margin:22px auto 0;font-size:16px;line-height:1.6;color:var(--dim)">Questions, ideas, or just to tell us something works — we read everything.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:32px">
+            <button id="mailBtn" type="button" style="display:inline-flex;align-items:center;gap:12px;padding:16px 30px;border:1px solid var(--gold-line);outline:1px solid var(--gold-soft);outline-offset:-5px;border-radius:3px;background:transparent;font-family:var(--mono);font-size:clamp(14px,2vw,17px);letter-spacing:.04em;color:var(--ink);cursor:pointer;transition:border-color .25s,color .25s,box-shadow .25s,transform .25s" class="btn-contact"><span style="width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 9px var(--neon-glow);display:inline-block"></span><span id="mailLabel">hello [at] likelylabs.com</span></button>
+            <button id="copyBtn" type="button" class="btn-copy" style="display:inline-flex;align-items:center;gap:8px;padding:16px 20px;border:1px solid var(--gold-line);border-radius:3px;background:transparent;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);cursor:pointer;transition:border-color .25s,color .25s">Copy address</button>
+          </div>
+          <div style="display:flex;gap:22px;justify-content:center;margin-top:28px;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase">
+            <a class="navlink" href="https://x.com/kchau" target="_blank" rel="noopener" style="color:var(--dim);transition:color .2s,text-shadow .2s">X / @kchau</a>
+            <span style="color:var(--gold-line)">·</span>
+            <a class="navlink" href="https://github.com/kevinchau" target="_blank" rel="noopener" style="color:var(--dim);transition:color .2s,text-shadow .2s">GitHub</a>
+          </div>
+        </section>
+      </main>
+
+      <footer style="border-top:1px solid var(--gold-line);background:rgba(255,255,255,.012)">
+        <div style="max-width:1180px;margin:0 auto;padding:clamp(28px,4vw,42px) clamp(20px,4vw,44px);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:16px">
+            <img src="logo.png" alt="Likely Labs" style="height:24px;width:auto;flex:none;object-fit:contain;filter:drop-shadow(0 0 6px var(--neon-soft));opacity:.92" />
+            <span style="font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)">An independent lab</span>
+          </div>
+          <span style="font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--faint);display:inline-flex;align-items:center;gap:6px"><span style="font-size:13px;line-height:1">©</span><span><span id="year">2026</span> Likely Labs LTD</span></span>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // Current year in the footer.
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      // Email is never in the page source as plaintext — assembled at runtime
+      // from split parts, with the '@' built from a char code.
+      var addr = ['hello', 'likelylabs.com'].join(String.fromCharCode(64));
+      var mailBtn = document.getElementById('mailBtn');
+      var mailLabel = document.getElementById('mailLabel');
+      var copyBtn = document.getElementById('copyBtn');
+
+      if (mailLabel) mailLabel.textContent = addr;
+      if (mailBtn) mailBtn.addEventListener('click', function () {
+        window.location.href = 'mailto:' + addr;
+      });
+
+      var t;
+      if (copyBtn) copyBtn.addEventListener('click', function () {
+        try { if (navigator.clipboard) navigator.clipboard.writeText(addr); } catch (e) {}
+        copyBtn.textContent = 'Copied ✓';
+        clearTimeout(t);
+        t = setTimeout(function () { copyBtn.textContent = 'Copy address'; }, 1800);
+      });
+    })();
+  </script>
 </body>
 </html>
