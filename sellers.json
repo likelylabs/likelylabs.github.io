@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "sellers": [
+    {
+      "seller_id": "pub-5230650474107453",
+      "seller_type": "PUBLISHER",
+      "name": "Likely Labs Ltd",
+      "domain": "likelylabs.com"
+    }
+  ]
+}
