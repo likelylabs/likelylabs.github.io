@@ -32,3 +32,9 @@ Pre selected background images values:
 * Bridge: https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4a065bd135cef62a0425f00234a43b08
 
 ###### Background Images are from http://unsplash.com and are license under Creative Commons 0 (Public Domain)
+
+## Station backup feeds
+
+Moved to the `likelylabs-feeds` repo, served at `https://feeds.likelylabs.com/`
+(dedicated subdomain so the backing host can be re-pointed via DNS without
+shipping new app binaries). See that repo's README for the update rules.
