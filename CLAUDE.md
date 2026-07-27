@@ -2,6 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Internal guidance
+
+This repository is PUBLIC. Never commit internal strategy, analytics,
+credentials, or business notes here. The operating tenets and cross-repo
+guidance live in the private coordination repo
+(`~/localdev/radioapp-hq/CLAUDE.md`) — read that before making changes.
+
 ## Project Overview
 
 This is a static GitHub Pages website for Likely Labs, a company that makes mobile radio apps. The site is hosted at likelylabs.com via the CNAME file.
