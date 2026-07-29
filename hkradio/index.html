@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HK Radio — Get the app</title>
+<meta name="description" content="HK Radio — Hong Kong radio stations, all in one app. Download for iPhone or Android.">
+<meta name="theme-color" content="#0a0a0a">
+<!-- Open Graph so the shared link previews nicely in Messages / WhatsApp / etc. -->
+<meta property="og:title" content="HK Radio">
+<meta property="og:description" content="Hong Kong radio, all in one app.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://likelylabs.com/hkradio">
+<style>
+  :root{
+    --bg:#f5f5f7; --card:#ffffff; --text:#111; --muted:#6b6b70; --line:#e6e6ea;
+    --btn:#111; --btn-text:#fff; --gold:#c8961e;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#000; --card:#141416; --text:#f5f5f7; --muted:#9a9aa0; --line:#26262b; --btn:#fff; --btn-text:#000; }
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; height:100%; }
+  body{
+    background:var(--bg); color:var(--text);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .card{
+    width:100%; max-width:420px; text-align:center;
+    background:var(--card); border:1px solid var(--line); border-radius:24px;
+    padding:40px 28px 32px; box-shadow:0 20px 60px rgba(0,0,0,.08);
+  }
+  .icon{
+    width:96px; height:96px; border-radius:22px; margin:0 auto 20px;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#e0b642,#a3720f);
+    box-shadow:0 10px 30px rgba(200,150,30,.35);
+  }
+  .icon svg{ width:52px; height:52px; fill:#fff; }
+  h1{ font-size:28px; margin:0 0 4px; letter-spacing:-.5px; }
+  .zh{ color:var(--muted); font-size:16px; margin:0 0 6px; }
+  .tag{ color:var(--muted); font-size:15px; margin:0 0 28px; }
+  .btns{ display:flex; flex-direction:column; gap:12px; }
+  a.store{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    text-decoration:none; font-weight:600; font-size:16px;
+    background:var(--btn); color:var(--btn-text);
+    padding:15px 18px; border-radius:14px; transition:transform .12s ease, opacity .12s ease;
+  }
+  a.store:active{ transform:scale(.98); opacity:.9; }
+  a.store svg{ width:22px; height:22px; fill:currentColor; }
+  .hint{ margin-top:22px; font-size:13px; color:var(--muted); min-height:18px; }
+  .hint a{ color:var(--gold); }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon" aria-hidden="true">
+      <!-- simple radio glyph -->
+      <svg viewBox="0 0 24 24"><path d="M20 6h-1.6l3.3-1.4-.8-1.8L12 5.7 3.9 2.8l-.8 1.8L6.4 6H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-3 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0-4a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM5 10h6v2H5v-2Zm0 4h4v2H5v-2Z"/></svg>
+    </div>
+    <h1>HK Radio</h1>
+    <p class="zh">香港收音機</p>
+    <p class="tag">Hong Kong radio, all in one app.</p>
+
+    <div class="btns">
+      <a class="store" id="ios" href="#">
+        <svg viewBox="0 0 24 24"><path d="M16.365 1.43c0 1.14-.42 2.22-1.17 3.02-.86.94-2.26 1.66-3.44 1.57-.14-1.1.43-2.28 1.16-3.06.83-.9 2.28-1.55 3.45-1.53ZM20.6 17.05c-.6 1.37-.9 1.98-1.66 3.2-1.07 1.7-2.58 3.82-4.45 3.83-1.67.02-2.1-1.09-4.36-1.08-2.26.01-2.73 1.1-4.4 1.08-1.87-.02-3.3-1.93-4.37-3.63-3-4.77-3.31-10.36-1.46-13.34 1.31-2.11 3.38-3.35 5.33-3.35 1.98 0 3.23 1.09 4.87 1.09 1.59 0 2.56-1.09 4.85-1.09 1.73 0 3.57.94 4.88 2.57-4.29 2.35-3.59 8.47.63 10.72Z"/></svg>
+        Download on the App Store
+      </a>
+      <a class="store" id="android" href="#">
+        <svg viewBox="0 0 24 24"><path d="M3.6 20.5 12.9 12 3.6 3.5c-.36.2-.6.58-.6 1.05v14.9c0 .47.24.85.6 1.05Zm10.4-7.1 2.4 2.2 3.4-1.95c.7-.4.7-1.4 0-1.8l-3.4-1.95-2.4 2.2 0 1.3Zm-.9-.9L14.9 11 5.7 5.8l7.5 6.7Zm0 .1-7.5 6.7 9.2-5.2-1.7-1.5Z"/></svg>
+        Get it on Google Play
+      </a>
+    </div>
+
+    <p class="hint" id="hint"></p>
+  </main>
+
+<script>
+(function () {
+  // Store links (kept here so the page is the single source of truth).
+  var IOS = "https://apps.apple.com/app/id1248884143";
+  var ANDROID = "https://play.google.com/store/apps/details?id=com.likelylabs.hkradio";
+
+  // Preserve a ?src= attribution tag if present (e.g. likelylabs.com/hkradio?src=whatsapp).
+  var src = new URLSearchParams(location.search).get("src");
+  function withSrc(base, key) {
+    if (!src) return base;
+    return base + (base.indexOf("?") > -1 ? "&" : "?") + key + "=" + encodeURIComponent(src);
+  }
+  var hasIOS = !!IOS;
+  var iosURL = hasIOS ? withSrc(IOS, "ct") : "";
+  var androidURL = withSrc(ANDROID, "referrer");
+
+  // Play-only markets (no iOS app): hide the App Store button.
+  var iosBtn = document.getElementById("ios");
+  if (hasIOS) { iosBtn.href = iosURL; } else { iosBtn.style.display = "none"; }
+  document.getElementById("android").href = androidURL;
+
+  var ua = navigator.userAgent || "";
+  var isIOS = hasIOS && (/iPhone|iPad|iPod/i.test(ua) ||
+              (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)); // iPadOS
+  var isAndroid = /Android/i.test(ua);
+
+  var hint = document.getElementById("hint");
+  if (isIOS || isAndroid) {
+    var target = isIOS ? iosURL : androidURL;
+    var storeName = isIOS ? "the App Store" : "Google Play";
+    hint.innerHTML = 'Opening ' + storeName + '… <a href="' + target + '">Tap here if it doesn’t.</a>';
+    // Redirect after a beat so the card is briefly visible (and the redirect isn't
+    // mistaken for a popup). replace() keeps it out of history.
+    setTimeout(function () { location.replace(target); }, 350);
+  } else {
+    hint.textContent = "Choose your device to download.";
+  }
+})();
+</script>
+</body>
+</html>
