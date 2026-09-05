@@ -52,4 +52,12 @@
     <loc>https://likelylabs.com/vnradio-terms.html</loc>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://likelylabs.com/tennisserve-privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://likelylabs.com/tennisserve-terms.html</loc>
+    <priority>0.3</priority>
+  </url>
 </urlset>
