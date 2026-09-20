@@ -15,17 +15,33 @@ This is a static GitHub Pages website for Likely Labs, a company that makes mobi
 
 ## Structure
 
-- `index.html` - Main landing page (based on a Coming Soon page template)
-- `*-privacy.html` / `*-terms.html` - Privacy policy and terms of service pages for mobile apps:
+- `index.html` - Main landing page
+- `*-privacy.html` / `*-terms.html` - Privacy policy and terms of service pages,
+  one pair per app. Store listings link these, so treat every URL as load-bearing:
   - hkradio (Hong Kong Radio)
-  - vnradio (Vietnam Radio)
   - hktwradio (Hong Kong/Taiwan Radio)
   - sgradio (Singapore Radio)
   - myradio (Malaysia Radio)
+  - vnradio (Vietnam Radio) - legacy market, no current app, pages still served.
+    Do not remove them without first confirming no published listing links them.
   - photoswipe (PhotoSwipe)
   - tennisserve (TennisServe)
-- `app-ads.txt` - App-ads.txt for ad network verification
-- `logo.jpg` - Company logo
+  - undertone - `undertone-privacy.html` only (no terms page)
+- `hkradio/`, `hktwradio/`, `sgradio/`, `myradio/` - one-link landing pages
+  (`index.html` + `icon.png`) that route a visitor to the right app store
+- `assets/` + `assets/large/` - station logos and artwork served at
+  `likelylabs.com/assets/...`; the station backup feeds reference these URLs,
+  so renaming or deleting a file here breaks live feeds
+- `app-ads.txt`, `sellers.json` - advertising authorization files
+- `robots.txt`, `sitemap.xml` - crawler files (`robots.txt` is `Allow: /`)
+- `googlebe222f8132685055.html` - Google site verification
+- `.well-known/appspecific/com.tesla.3p.public-key.pem` - PUBLIC key that the
+  Tesla Fleet API requires a registered third-party application to publish.
+  Unrelated to the radio apps; publishing it is intended, it is not a secret.
+- `CNAME` - likelylabs.com
+- `.nojekyll` - serve files verbatim, no Jekyll build (this is also why `.md`
+  files in this repo are served raw at the apex domain)
+- `og-card.png`, `logo.jpg` / `logo.png` / `logo.webp`, `*-icon.png` / `.webp`
 
 ## Development
 

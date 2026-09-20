@@ -1,0 +1,8 @@
+# This repository is PUBLIC and every committed file is served at
+# likelylabs.com. Keep local cruft and anything internal out of it.
+.DS_Store
+**/.DS_Store
+.claude/
+*.log
+.env
+.env.*
