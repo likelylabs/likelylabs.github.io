@@ -2,28 +2,44 @@
 <p>Your privacy is important to us. This privacy policy explains how Likely Labs Ltd handles information in our app, TennisServe.</p>
 
 <h3>Information We Collect</h3>
-<p>TennisServe does not collect, store, or transmit any personal information or usage data. We collect nothing.</p>
+<p>A copy of TennisServe from the App Store sends us nothing, and we collect no personal information or usage data from it. Test copies of the app send us a log of each filming session, as described under Session Logs. If you chose to share analytics with app developers, Apple sends us crash reports and usage totals that do not identify you. Testers on TestFlight can also send us feedback and crash reports through Apple. These come with the tester's email address and phone details.</p>
 
 <h3>Everything Runs on Your Device</h3>
-<p>Pose estimation, scoring, and drill selection all run on your iPhone. Your videos, the body landmarks the app detects, your scores, and any player names or heights you enter are stored only inside the app on your device. They are removed when you delete the app. Nothing is uploaded to us or to anyone else.</p>
+<p>Pose estimation, scoring, and drill selection all run on your iPhone. In a filming session, a phone that films with you can also find the body landmarks in its own clip. Your videos, the body landmarks the app detects, your scores, and any player names or heights you enter are stored inside the app on your device. Deleting the app removes them. It does not remove copies in your Photos library, files you exported, or clips and landmarks you sent to a host phone. The app never sends your videos to a server. In a filming session they travel phone to phone over a direct link, as described below. If you use iCloud Backup, it includes your saved serves, players and settings, as it does for any app. If you use iCloud Photos, it includes the clips the app adds to your library.</p>
+
+<h3>Filming Sessions</h3>
+<p>A filming session lets several iPhones film one serve together. The phones find each other and connect over Wi-Fi, either directly or through a Wi-Fi network they share. This needs your permission for local network access. Nothing in a session passes through a server. Test copies of the app also send us a log of each session, as described under Session Logs. While a session is open, the host phone shows the selected player's name and a four-digit code to nearby devices that look for a session. A phone joins only after it scans the host phone's code, or after the host allows it in.</p>
+<p>A phone that asks to join sends the host phone a few details. They are the name chosen for the phone, its model and iOS version, what its camera can record, and its battery level and temperature state. They also include a random identifier the app created on that phone. It stays the same from one session to the next until the app is deleted, so a host phone can recognize it. Once a phone has joined, the host phone starts and stops its recording, also when that phone asks it to. Over the link each phone sends the host phone its clip and the camera settings it filmed with. It also says whether it is low on storage, so the host can show whether each phone is ready.</p>
+<p>The host phone can also ask a phone that joined to read its own clip. That phone then finds the body landmarks in its clip itself, with settings the host sends, and sends the host phone a file of those landmarks. The file also names the pose model, the library version, the app build and the processor that made it. If that phone's battery runs low or it gets too hot, it stops reading and tells the host why. With a developer setting, the host phone can take a phone's landmarks without its clip, and that clip then never crosses the link.</p>
+<p>When the host phone reads a take, it keeps each clip and any landmarks a phone sent for it as part of the saved serve. The saved serve also keeps each phone's name, model, iOS version, identifier, camera settings, battery level and temperature state. Clips and landmarks of a take the host does not read are not saved with any serve, and the app deletes them the next time it launches.</p>
+<p>A phone that films for someone else deletes its copy once the host has what it asked for. Before that it adds the clip to its own Photos library, if that phone's "Save recordings to Photos" setting is on.</p>
+<p>The link between the phones is not encrypted, so a nearby device that listens in could read the clips and phone details it carries. Film with phones you know.</p>
+
+<h3>Session Logs</h3>
+<p>Each phone keeps a log of its recent filming sessions inside the app, so a session that fails can be understood. The log records how the phones found each other, connected and lost a link, and what the session screens showed. It also notes the app's version, the phone's model and iOS version, its battery level and temperature state, and whether Low Power Mode is on. It notes whether the app may use the camera and the local network, and the kind of network each link used.</p>
+<p>The log never holds a name, a network address, a session code, a video, a body landmark or a score. Phones and connections appear only by a short part of an identifier. The logs are left out of iCloud Backup, and deleting the app removes them. A copy of the app from the App Store never sends them anywhere.</p>
+<p>Test copies of the app, which include TestFlight builds and the copy Apple reviews, send each session's log to us by themselves. A log goes when the session ends or when the app next opens. Before a log goes, the app adds the system's network messages and its own messages from that session, with network addresses, identifiers and session codes removed. Each upload also carries the app's version, the phone's model and iOS version, whether the phone hosted, and a random tag made for that install. The tag is not a device identifier, and a reinstall makes a new one. The logs go to a service we run on Cloudflare. Like any internet request, an upload shows that service the phone's internet address, which we do not store. We use these logs only to fix filming sessions.</p>
+<p>On a test copy you can turn the sending off in Settings, under Diagnostics, with "Send session logs automatically". While it is on, a test copy sends every kept log it has not sent before. That includes logs kept while it was off, or by a copy from the App Store. "Send session log", in Settings and on the session screens, shares the same logs by hand, only where you choose to send them. A tester can ask us to delete their logs by writing to hello@likelylabs.com, naming the phone model and the days they filmed.</p>
 
 <h3>No Accounts</h3>
-<p>TennisServe does not require an account. You never sign in, and we never ask for your name or email address.</p>
+<p>TennisServe does not require an account. You never sign in, and the app never asks for your email address.</p>
 
 <h3>Third-Party Services</h3>
-<p>TennisServe does not include any third-party analytics, advertising, tracking, or crash reporting services. The app makes no network requests of its own.</p>
+<p>TennisServe does not include any third-party advertising, tracking, or crash reporting services. The app finds body positions with MediaPipe, an on-device pose library made by Google. From version 2.0 on the App Store, the app is built without that library's usage reporting, so the app sends nothing to Google.</p>
+<p>Version 1.0, and test builds of 2.0 before build 40, sent Google a small usage report when they analyzed a serve. From the library's code, the report held the app's identifier and version, the iOS version, the kind of analysis, and counts and timings. Like any internet request, it showed Google the phone's internet address, and it may have shown the phone's model. The report format has no place for video, images, body positions, scores, names, or anything you typed. We never received these reports. Updating to version 2.0 stops them.</p>
+<p>Apart from the links between the phones of a filming session and the session logs of test copies, the app makes no network requests of its own. Some Apple services the app uses connect to Apple in the usual way. They are the App Store for subscriptions, and iCloud Photos when a video you pick is stored in iCloud.</p>
 
 <h3>Camera and Photos</h3>
-<p>The app uses the camera only when you tap record. When you choose a video from your library, the app uses Apple's photo picker. Only the video you choose reaches the app. The app does not browse or read the rest of your library.</p>
+<p>The app uses the camera when you film a serve, when you scan the code of a filming session, and while a phone is in a filming session. In a session a phone records only when the host phone starts a take, which a joined phone can ask for. When you choose a video with Apple's photo picker, the app receives a copy of that video. For a slow-motion clip, if you allow Photos access, it reads that clip's original file instead, so the serve is analyzed at its real frame rate. The app reads only the video you choose and does not browse the rest of your library. Serves you film on a single phone are added to your library unless you turn that off in Settings. In a filming session, only a phone that films for someone else adds its clip to its own library.</p>
 
 <h3>Sharing</h3>
-<p>You can export a PDF report of a serve. The PDF goes only where you choose to send it.</p>
+<p>You can export a PDF report of a serve. Anything you export or share from the app goes only where you choose to send it.</p>
 
 <h3>Subscriptions</h3>
 <p>Subscriptions are processed by Apple through the App Store. Likely Labs Ltd does not receive your name, email address, or payment details.</p>
 
 <h3>Children</h3>
-<p>TennisServe is not directed at children under 13, and we do not knowingly collect information from them. As described above, the app collects no information from anyone.</p>
+<p>TennisServe is not directed at children under 13, and we do not knowingly collect information from them.</p>
 
 <h3>Changes to This Policy</h3>
 <p>We may update this privacy policy from time to time. Your continued use of the app after any changes will be regarded as acceptance of the updated policy.</p>
@@ -32,4 +48,4 @@
 <p><strong>Likely Labs Ltd</strong><br />
 hello@likelylabs.com</p>
 
-<p>This policy is effective as of 4 September 2026.</p>
+<p>This policy is effective as of 22 October 2026.</p>
