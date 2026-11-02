@@ -170,6 +170,8 @@
     .art img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s;filter:saturate(.92)}
     .poster:hover .art img{transform:scale(1.03);filter:none}
     .art.left img{object-position:left center}
+    .art.card{aspect-ratio:1200/630}
+    .art.card img{filter:none}
     .plate{display:flex;flex-direction:column;gap:12px;padding:20px 22px 22px;flex:1}
     .plate-head{display:flex;align-items:center;gap:14px;min-width:0}
     .plate-head img{width:48px;height:48px;border-radius:12px;flex:none}
@@ -407,7 +409,7 @@
         <div class="grid two">
           <a class="poster" href="https://tesla-essentials.com" target="_blank" rel="noopener">
             <i class="stud tl"></i><i class="stud tr"></i><i class="stud bl"></i><i class="stud br"></i>
-            <div class="art">
+            <div class="art card">
               <picture>
                 <source type="image/webp" srcset="portfolio/tesla-hero-800.webp 800w, portfolio/tesla-hero-1200.webp 1200w" sizes="(min-width:900px) 560px, 100vw">
                 <img src="portfolio/tesla-hero-800.jpg" srcset="portfolio/tesla-hero-800.jpg 800w, portfolio/tesla-hero-1200.jpg 1200w" sizes="(min-width:900px) 560px, 100vw" width="1200" height="630" alt="" loading="lazy" decoding="async" />
@@ -421,10 +423,10 @@
           <a class="poster" href="https://cyberoffroading.com" target="_blank" rel="noopener">
             <i class="stud tl"></i><i class="stud tr"></i><i class="stud bl"></i><i class="stud br"></i>
             <div class="ribbon" aria-hidden="true"><b>Acquired</b></div>
-            <div class="art">
+            <div class="art card">
               <picture>
                 <source type="image/webp" srcset="portfolio/cyber-hero-800.webp 800w, portfolio/cyber-hero-1200.webp 1200w" sizes="(min-width:900px) 560px, 100vw">
-                <img src="portfolio/cyber-hero-800.jpg" srcset="portfolio/cyber-hero-800.jpg 800w, portfolio/cyber-hero-1200.jpg 1200w" sizes="(min-width:900px) 560px, 100vw" width="1200" height="750" alt="A Cybertruck on the salt flats at dusk" loading="lazy" decoding="async" />
+                <img src="portfolio/cyber-hero-800.jpg" srcset="portfolio/cyber-hero-800.jpg 800w, portfolio/cyber-hero-1200.jpg 1200w" sizes="(min-width:900px) 560px, 100vw" width="1200" height="630" alt="Cyberoffroading: curated gear for the trail" loading="lazy" decoding="async" />
               </picture>
             </div>
             <div class="plate">
